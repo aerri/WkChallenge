@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WkChallenge.Core", "WkChallenge.Core\WkChallenge.Core.csproj", "{49E486BE-13BF-42C6-ABDD-72F8E9785762}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WkChallenge.Infrastructure", "WkChallenge.Infrastructure\WkChallenge.Infrastructure.csproj", "{0B2CFEAD-0AED-4EAD-B77C-AA15711E7303}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{49E486BE-13BF-42C6-ABDD-72F8E9785762}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49E486BE-13BF-42C6-ABDD-72F8E9785762}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49E486BE-13BF-42C6-ABDD-72F8E9785762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B2CFEAD-0AED-4EAD-B77C-AA15711E7303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B2CFEAD-0AED-4EAD-B77C-AA15711E7303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B2CFEAD-0AED-4EAD-B77C-AA15711E7303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B2CFEAD-0AED-4EAD-B77C-AA15711E7303}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
