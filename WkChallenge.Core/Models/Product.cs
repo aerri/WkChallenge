@@ -1,11 +1,6 @@
 ﻿namespace WkChallenge.Core.Models;
 
-public class Product : BaseModel<int>
+public record Product : BaseModel<int>
 {
-	public string Name { get; set; }
-
-	public Product(string name)
-	{
-		Name = name;
-	}
+	public string Name { get; set; } = string.Empty;
 }

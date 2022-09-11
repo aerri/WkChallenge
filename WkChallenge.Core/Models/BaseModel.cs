@@ -2,7 +2,7 @@
 
 namespace WkChallenge.Core.Models;
 
-public class BaseModel<T> : IAggregateRoot
+public abstract record BaseModel<T> : IAggregateRoot
 {
-	public T Id { get; set; }
+	public T Id { get; init; }
 }
