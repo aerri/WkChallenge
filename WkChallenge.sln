@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WkChallenge.Core", "WkChall
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WkChallenge.Infrastructure", "WkChallenge.Infrastructure\WkChallenge.Infrastructure.csproj", "{136B176C-93E6-42B8-9B97-4863909520DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WkChallenge.Api", "WkChallenge.Api\WkChallenge.Api.csproj", "{408DA7CA-FACD-4FA6-B656-118F213845B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WkChallenge.Web.Api", "WkChallenge.Web.Api\WkChallenge.Web.Api.csproj", "{408DA7CA-FACD-4FA6-B656-118F213845B3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{5BD698FA-AD92-48E4-A8BE-597567536532}"
 	ProjectSection(SolutionItems) = preProject

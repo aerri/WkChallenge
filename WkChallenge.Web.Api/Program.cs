@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using WkChallenge.Api;
+using WkChallenge.Web.Api;
 using WkChallenge.Core.Interfaces;
 using WkChallenge.Core.Models;
 using WkChallenge.Infrastructure.Data;

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WkChallenge.Infrastructure.Data;
 
-namespace WkChallenge.Api;
+namespace WkChallenge.Web.Api;
 
 public static class ExtensionMethods
 {
