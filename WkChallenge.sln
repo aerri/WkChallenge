@@ -2,7 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{2DCCD703-2BD1-415B-AD7F-52859C5C2138}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WkChallenge.Infrastructure", "WkChallenge.Infrastructure\WkChallenge.Infrastructure.csproj", "{0B2CFEAD-0AED-4EAD-B77C-AA15711E7303}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WkChallenge.Core", "WkChallenge.Core\WkChallenge.Core.csproj", "{DF14BF05-FA8B-4872-BF03-FEAD3B5CF522}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WkChallenge.Infrastructure", "WkChallenge.Infrastructure\WkChallenge.Infrastructure.csproj", "{136B176C-93E6-42B8-9B97-4863909520DB}"
