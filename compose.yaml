@@ -1,0 +1,17 @@
+version: '3.x'
+services:
+  wk-challenge-db:
+    container_name: wk-challenge-db
+    image: postgres:alpine
+    environment:
+      POSTGRES_USER: db_user
+      POSTGRES_PASSWORD: db_password
+      POSTGRES_DB: wk-challenge-db
+    networks:
+      - wk-challenge-network
+    ports:
+      - '5432:5432'
+
+networks:
+  wk-challenge-network:
+    name: wk-challenge-network
