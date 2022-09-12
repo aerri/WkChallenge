@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\WkChallenge.Core\WkChallenge.Core.csproj" />
     <ProjectReference Include="..\WkChallenge.Infrastructure\WkChallenge.Infrastructure.csproj" />
+    <ProjectReference Include="..\WkChallenge.Web.Shared\WkChallenge.Web.Shared.csproj" />
   </ItemGroup>
 
 </Project>
