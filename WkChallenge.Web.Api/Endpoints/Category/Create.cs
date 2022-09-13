@@ -27,6 +27,6 @@ public class Create : EndpointBaseAsync.WithRequest<CreateCategoryRequest>.WithA
 		toAdd = await _repository.AddAsync(toAdd, cancellationToken);
 		var dto = _mapper.Map<CategoryDto>(toAdd);
 		response.Category = dto;
-		return Ok(response);
+		return Created("", response);
 	}
 }
