@@ -9,8 +9,8 @@ namespace WkChallenge.Web.Api.Endpoints.Category;
 
 public class List : EndpointBaseAsync.WithRequest<ListCategoriesRequest>.WithActionResult<ListCategoriesResponse>
 {
-	private readonly IRepository<Core.Models.Category> _repository;
 	private readonly IMapper _mapper;
+	private readonly IRepository<Core.Models.Category> _repository;
 
 	public List(IRepository<Core.Models.Category> repository, IMapper mapper)
 	{
