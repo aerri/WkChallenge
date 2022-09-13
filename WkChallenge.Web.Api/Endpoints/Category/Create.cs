@@ -9,8 +9,8 @@ namespace WkChallenge.Web.Api.Endpoints.Category;
 
 public class Create : EndpointBaseAsync.WithRequest<CreateCategoryRequest>.WithActionResult<CreateCategoryResponse>
 {
-	private readonly IRepository<Core.Models.Category> _repository;
 	private readonly IMapper _mapper;
+	private readonly IRepository<Core.Models.Category> _repository;
 
 	public Create(IRepository<Core.Models.Category> repository, IMapper mapper)
 	{
