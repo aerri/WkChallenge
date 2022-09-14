@@ -4,5 +4,5 @@ namespace WkChallenge.Core.Models;
 
 public abstract record BaseModel<T> : IAggregateRoot
 {
-	public T Id { get; init; }
+	public T Id { get; init; } = default!;
 }
