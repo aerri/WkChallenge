@@ -8,7 +8,7 @@ public class ProductProfile : Profile
 {
 	public ProductProfile()
 	{
-		CreateMap<Product, ProductDto>();
+		CreateMap<Product, ProductDto>().ForMember(dto => dto.Category, options => options.MapFrom(product => product.Category.Name));
 		CreateMap<CreateProductRequest, Product>();
 	}
 }
