@@ -1,17 +1,23 @@
 version: '3.x'
 services:
-  wk-challenge-db:
-    container_name: wk-challenge-db
+  wkchallenge-db:
+    container_name: wkchallenge-db
     image: postgres:alpine
+    restart: always
     environment:
       POSTGRES_USER: db_user
       POSTGRES_PASSWORD: db_password
-      POSTGRES_DB: wk-challenge-db
+      POSTGRES_DB: wkchallenge-db
+    volumes:
+      - wkchallenge-data:/var/lib/postgresql/data
     networks:
-      - wk-challenge-network
+      - wkchallenge-network
     ports:
       - '5432:5432'
 
+volumes:
+  wkchallenge-data:
+    name: wkchallenge-data
 networks:
-  wk-challenge-network:
-    name: wk-challenge-network
+  wkchallenge-network:
+    name: wkchallenge-network
