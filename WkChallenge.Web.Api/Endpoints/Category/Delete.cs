@@ -2,6 +2,8 @@
 using Ardalis.ApiEndpoints;
 using Microsoft.AspNetCore.Mvc;
 using WkChallenge.Core.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using WkChallenge.Web.Shared.ViewModels;
 using Swashbuckle.AspNetCore.Annotations;
 using WkChallenge.Web.Shared.ViewModels.Category;
 
@@ -22,9 +24,13 @@ public class Delete : EndpointBaseAsync.WithRequest<DeleteCategoryRequest>.WithA
 	[SwaggerOperation(Summary = "Deletes a Category", Description = "Deletes a Category", OperationId = "categories.delete", Tags = new[] {"CategoryEndpoints"})]
 	public override async Task<ActionResult<DeleteCategoryResponse>> HandleAsync([FromRoute] DeleteCategoryRequest request, CancellationToken cancellationToken = new())
 	{
-		var response = new DeleteCategoryResponse(request.CorrelationId);
-		var toDelete = _mapper.Map<Core.Models.Category>(request);
-		await _repository.DeleteAsync(toDelete, cancellationToken);
-		return Ok(response);
+		try
+		{
+			var toDelete = _mapper.Map<Core.Models.Category>(request);
+			await _repository.DeleteAsync(toDelete, cancellationToken);
+			var response = new DeleteCategoryResponse(request.CorrelationId);
+			return Ok(response);
+		}
+		catch (DbUpdateConcurrencyException) { return NotFound(new NotFoundResponse(request.CorrelationId)); }
 	}
 }
