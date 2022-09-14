@@ -13,10 +13,10 @@ public class GetById : EndpointBaseAsync.WithRequest<GetByIdCategoryRequest>.Wit
 	private readonly IMapper _mapper;
 	private readonly IRepository<Core.Models.Category> _repository;
 
-	public GetById(IRepository<Core.Models.Category> repository, IMapper mapper)
+	public GetById(IMapper mapper, IRepository<Core.Models.Category> repository)
 	{
-		_repository = repository;
 		_mapper = mapper;
+		_repository = repository;
 	}
 
 	[HttpGet("api/categories/{Id}")]

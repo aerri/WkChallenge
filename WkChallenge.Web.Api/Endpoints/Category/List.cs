@@ -12,10 +12,10 @@ public class List : EndpointBaseAsync.WithRequest<ListCategoriesRequest>.WithAct
 	private readonly IMapper _mapper;
 	private readonly IRepository<Core.Models.Category> _repository;
 
-	public List(IRepository<Core.Models.Category> repository, IMapper mapper)
+	public List(IMapper mapper, IRepository<Core.Models.Category> repository)
 	{
-		_repository = repository;
 		_mapper = mapper;
+		_repository = repository;
 	}
 
 	[HttpGet("api/categories")]

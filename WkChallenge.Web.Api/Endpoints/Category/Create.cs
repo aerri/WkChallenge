@@ -12,10 +12,10 @@ public class Create : EndpointBaseAsync.WithRequest<CreateCategoryRequest>.WithA
 	private readonly IMapper _mapper;
 	private readonly IRepository<Core.Models.Category> _repository;
 
-	public Create(IRepository<Core.Models.Category> repository, IMapper mapper)
+	public Create(IMapper mapper, IRepository<Core.Models.Category> repository)
 	{
-		_repository = repository;
 		_mapper = mapper;
+		_repository = repository;
 	}
 
 	[HttpPost("api/categories")]
@@ -25,6 +25,6 @@ public class Create : EndpointBaseAsync.WithRequest<CreateCategoryRequest>.WithA
 		var toAdd = _mapper.Map<Core.Models.Category>(request);
 		toAdd = await _repository.AddAsync(toAdd, cancellationToken);
 		var response = new CreateCategoryResponse(request.CorrelationId) {Category = _mapper.Map<CategoryDto>(toAdd)};
-		return Created($"api/categories/{toAdd}", response);
+		return Created($"api/categories/{toAdd.Id}", response);
 	}
 }
