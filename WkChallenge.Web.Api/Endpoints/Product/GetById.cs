@@ -19,12 +19,12 @@ public class GetById : EndpointBaseAsync.WithRequest<GetProductRequest>.WithActi
 		_repository = repository;
 	}
 
-	[HttpGet("api/products/{ProductId}")]
-	[SwaggerOperation(Summary = "Get a Product by Id", Description = "Gets a Product by Id", OperationId = "products.Get", Tags = new[] {"ProductEndpoints"})]
+	[HttpGet("api/products/{Id}")]
+	[SwaggerOperation(Summary = "Get a Product by Id", Description = "Gets a Product by Id", OperationId = "products.get", Tags = new[] {"ProductEndpoints"})]
 	public override async Task<ActionResult<GetProductResponse>> HandleAsync([FromRoute] GetProductRequest request, CancellationToken cancellationToken = new())
 	{
 		var response = new GetProductResponse(request.CorrelationId);
-		var product = await _repository.SingleOrDefaultAsync(new ProductByIdIncludeCategorySpecs(request.ProductId), cancellationToken);
+		var product = await _repository.SingleOrDefaultAsync(new ProductByIdIncludeCategorySpecs(request.Id), cancellationToken);
 		if (product is null) return NotFound();
 		response.Product = _mapper.Map<ProductDto>(product);
 		return Ok(response);

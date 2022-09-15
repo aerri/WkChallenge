@@ -2,5 +2,5 @@
 
 public class GetProductRequest : BaseRequest
 {
-	public int ProductId { get; set; }
+	public int Id { get; set; }
 }
