@@ -10,7 +10,7 @@ public class CategoryProfile : Profile
 	{
 		CreateMap<Category, CategoryDto>();
 		CreateMap<CreateCategoryRequest, Category>();
-		CreateMap<DeleteCategoryRequest, Category>();
 		CreateMap<UpdateCategoryRequest, Category>();
+		CreateMap<DeleteCategoryRequest, Category>();
 	}
 }

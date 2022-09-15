@@ -11,5 +11,6 @@ public class ProductProfile : Profile
 		CreateMap<Product, ProductDto>().ForMember(dto => dto.Category, options => options.MapFrom(product => product.Category.Name));
 		CreateMap<CreateProductRequest, Product>();
 		CreateMap<UpdateProductRequest, Product>();
+		CreateMap<DeleteProductRequest, Product>();
 	}
 }
